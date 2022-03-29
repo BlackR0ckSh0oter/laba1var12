@@ -10,7 +10,7 @@ using namespace std;
 //12в - Подсчет числа элементов, больших размаха (разности между максимальным и минимальным элементами)
 
 template <class T>
-void chosen_class(T* q, int n_q)
+void siclass(T* q, int n_q)
 {
 	setlocale(LC_ALL, "Rus");
 	int c;
@@ -31,7 +31,8 @@ void chosen_class(T* q, int n_q)
 		cout << "6 - Слияние двух очередей" << endl;
 		cout << "7 - Выбор другой очереди" << endl;
 		cout << "8 - Узнать очередь, с которой мы работаем" << endl;
-		cout << "0 - Выбор класса-наследника" << endl;
+		cout << "9 - Выбор класса-наследника" << endl;
+		cout << "0 - Выход из программы" << endl;
 		cout << "--|>";
 		cin >> c;
 
@@ -170,9 +171,16 @@ void chosen_class(T* q, int n_q)
 			cout << "Вы сейчас работаете с очередью №" << pointer << endl;
 			cout << "\n";
 			break;
-		case 0:
+		case 9:
 			cout << "\n";
 			flag = 0;
+			break;
+		case 0:
+			exit(1);
+			break;
+		default:
+			system("cls");
+			cout << "Error" << endl;
 			break;
 		}
 	}
@@ -212,19 +220,19 @@ int main()
 		case 1:
 			q1 = new private_queue[amount_queue];
 			system("cls");
-			chosen_class(q1, amount_queue);
+			siclass(q1, amount_queue);
 			delete[] q1;
 			break;
 		case 2:
 			q2 = new protected_queue[amount_queue];
 			system("cls");
-			chosen_class(q2, amount_queue);
+			siclass(q2, amount_queue);
 			delete[] q2;
 			break;
 		case 3:
 			q3 = new public_queue[amount_queue];
 			system("cls");
-			chosen_class(q3, amount_queue);
+			siclass(q3, amount_queue);
 			delete[] q3;
 			break;
 		case 0:
