@@ -1,4 +1,4 @@
-#pragma once
+
 #include "Header.h"
 
 class private_queue : private clqueue

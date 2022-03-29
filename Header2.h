@@ -1,4 +1,4 @@
-#pragma once
+
 #include "Header.h"
 
 class protected_queue : protected clqueue
